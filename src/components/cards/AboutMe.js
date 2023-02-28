@@ -3,7 +3,6 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardMedia,
   Container,
   Typography,
 } from "@mui/material";
@@ -12,19 +11,23 @@ import React from "react";
 function AboutMe() {
   return (
     <Container sx={{ marginBottom: 2, marginTop: 2 }}>
-      <Card>
-        <CardContent>
-          <CardMedia>
-            <Avatar></Avatar>
-          </CardMedia>
-          <CardHeader title="Get to know me!" />
+      <Card style={{ display: "inline-block" }}>
+        <div
+          style={{
+            paddingTop: "16px",
+            paddingLeft: "16px",
+          }}
+        >
+          <Avatar sx={{ bgcolor: "#fe3546" }}>HG</Avatar>
+        </div>
+        <CardHeader title="Get to know me!" />
+        <CardContent sx={{ maxWidth: "450px" }}>
           <Typography variant="body1">
-            {" "}
             Originally qualified as a chef I took the decision to change career
             paths to Front End. Although it might seem like a big jump, I see
             similar core traits including creativity, curiousity to continually
             develop and learn new methods, good team work, attention to detail
-            and customer focus.{" "}
+            and customer focus.
           </Typography>
           <Typography variant="body1">
             I believe my past 20 years experience help me to work well with
