@@ -5,18 +5,25 @@ import Card2 from "../components/cards/Card2";
 import Card3 from "../components/cards/Card3";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import { Grid } from "@mui/material";
 
-function HomePage() {
+export default function HomePage() {
   return (
     <>
       <AboutMe />
-      <Card1 />
-      <Card2 />
-      <Card3 />
+      <Grid container>
+        <Grid item xs={12} md={6} lg={4}>
+          <Card1 />
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Card2 />
+        </Grid>
+        <Grid item xs={12} md={6} lg={4}>
+          <Card3 />
+        </Grid>
+      </Grid>
       <Contact />
       <Footer />
     </>
   );
 }
-
-export default HomePage;

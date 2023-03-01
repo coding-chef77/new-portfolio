@@ -14,7 +14,7 @@ function Footer() {
         textAlign: "center",
       }}
     >
-      <Typography variant="subtitle2">
+      <Typography variant="subtitle2" sx={{ color: "primary.main" }}>
         Coded by Heine Günther {new Date().getFullYear()}
       </Typography>
       <Box
