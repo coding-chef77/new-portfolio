@@ -9,6 +9,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import chefIcon from "./icon/chef.png";
+import SoupKitchenIcon from "@mui/icons-material/SoupKitchen";
 
 const pages = ["Projects", "About Me", "Contact"];
 
@@ -43,13 +45,14 @@ function ResponsiveAppBar() {
               display: { xs: "none", md: "flex" },
               fontFamily: "M PLUS 1 Code",
               fontWeight: 800,
-
               letterSpacing: ".1rem",
               color: "primary.main",
               textDecoration: "none",
             }}
           >
-            HG
+            HG{"{"}
+            <SoupKitchenIcon sx={{ color: "#298ff2" }} />
+            {"}"}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -106,7 +109,9 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            HG
+            HG{"{"}
+            <SoupKitchenIcon sx={{ color: "#298ff2" }} />
+            {"}"}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

@@ -31,8 +31,12 @@ function Contact() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
-      <Paper sx={{ p: 4 }}>
+    <Container
+      component="main"
+      maxWidth="xs"
+      sx={{ marginBottom: 6, marginTop: 6 }}
+    >
+      <Paper sx={{ p: 4, backgroundColor: "#ccc" }}>
         <Box
           sx={{
             marginTop: 8,
@@ -44,7 +48,7 @@ function Contact() {
         >
           <form onSubmit={onSubmit}>
             <TextField
-              label="From Name"
+              label="Name"
               name="from_name"
               value={toSend.from_name}
               onChange={handleChange}
@@ -66,6 +70,7 @@ function Contact() {
               onChange={handleChange}
               rows={4}
               fullWidth
+              multiline
               margin="normal"
             />
             <TextField

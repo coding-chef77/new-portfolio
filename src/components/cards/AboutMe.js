@@ -10,7 +10,14 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <Container sx={{ marginBottom: 2, marginTop: 2 }}>
+    <Container
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        marginBottom: 6,
+        marginTop: 6,
+      }}
+    >
       <Card style={{ display: "inline-block" }}>
         <div
           style={{
