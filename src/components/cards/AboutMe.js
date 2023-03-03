@@ -7,8 +7,12 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import heine from "./images/heine-portrait.png";
 
 function AboutMe() {
+  const skillsets = ["React", "Javascript", "HTML", "CSS", "Rest API"];
+  const projectManagementTools = ["Trello", "Gantt", "Kanban"];
+
   return (
     <Container
       sx={{
@@ -25,28 +29,39 @@ function AboutMe() {
             paddingLeft: "16px",
           }}
         >
-          <Avatar sx={{ bgcolor: "#fe3546" }}>HG</Avatar>
+          <Avatar
+            src={heine}
+            sx={{ width: 60, height: 60, backgroundColor: "primary.main" }}
+          />
         </div>
-        <CardHeader title="Get to know me!" />
+        <CardHeader title="A bit about me - the coding chef!" />
         <CardContent sx={{ maxWidth: "450px" }}>
           <Typography variant="body1">
-            Originally qualified as a chef I took the decision to change career
-            paths to Front End. Although it might seem like a big jump, I see
-            similar core traits including creativity, curiousity to continually
-            develop and learn new methods, good team work, attention to detail
-            and customer focus.
+            After a varied international career in food & logistics, I decided
+            to change career paths and am about to graduate as a Front End
+            Developer. Although it might seem like a big jump, I see similar
+            traits including creativity, curiosity to continually learn and try
+            new methods, good team work, precision, time management and keeping
+            customers happy. Through building the different elements together, I
+            now create sites, instead of dishes!
           </Typography>
+          <br />
           <Typography variant="body1">
-            I believe my past 20 years experience help me to work well with
-            different teams and clients across a broad variety of projects. I`ve
-            always maintained a strong customer focus whether I worked offshore
-            (under some extreme circumstances!), internationally, and in the
-            public sector.
+            I'm looking to join a team where I can contribute my skills and
+            continue to learn more from others as we go.
           </Typography>
+          <br />
           <Typography variant="body1">
-            I`ve already learned a lot of new core skills and very much look
-            forward to starting to use these in a professional setting and to
-            continuing to learn a lot more from new colleagues.
+            Check out some of my projects and reach out in the Contact Form
+            below, it would be great to hear from you!
+          </Typography>
+          <br />
+          <Typography variant="h6">Skillsets:</Typography>
+          <Typography variant="body1">{skillsets.join(", ")}</Typography>
+          <br />
+          <Typography variant="h6">Project Management Tools:</Typography>
+          <Typography variant="body1">
+            {projectManagementTools.join(", ")}
           </Typography>
         </CardContent>
       </Card>

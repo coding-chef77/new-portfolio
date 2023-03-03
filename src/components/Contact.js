@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { send } from "emailjs-com";
-import { Box, Button, Container, Paper, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Container,
+  Paper,
+  TextField,
+} from "@mui/material";
 
 function Contact() {
   const [toSend, setToSend] = useState({
@@ -10,9 +17,11 @@ function Contact() {
     reply_to: "",
   });
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     send("service_s3m4ejl", "template_e6kjwdr", toSend, "59cQ7_9eF9pJMj5L7")
       .then((response) => {
         if (response.status === 200) {
@@ -23,6 +32,9 @@ function Contact() {
       })
       .catch((err) => {
         setMessage("Something went wrong. Please try again later.");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -81,11 +93,20 @@ function Contact() {
               fullWidth
               margin="normal"
             />
-            <Button variant="contained" type="submit" sx={{ marginTop: 2 }}>
-              Submit
+            <Button
+              variant="contained"
+              type="submit"
+              sx={{ marginTop: 2 }}
+              disabled={loading}
+            >
+              {loading ? <CircularProgress size={24} /> : "Submit"}
             </Button>
             {message && (
-              <Box sx={{ marginTop: 2 }}>
+              <Box
+                sx={{
+                  marginTop: 2,
+                }}
+              >
                 {message === "Message sent successfully!" ? (
                   <span style={{ color: "green" }}>{message}</span>
                 ) : (
