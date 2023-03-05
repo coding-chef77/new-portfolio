@@ -48,7 +48,7 @@ function Contact() {
       maxWidth="xs"
       sx={{ marginBottom: 6, marginTop: 6 }}
     >
-      <Paper sx={{ p: 4, backgroundColor: "#ccc" }}>
+      <Paper elevation={10} sx={{ p: 4, backgroundColor: "#ccc" }}>
         <Box
           sx={{
             marginTop: 8,
