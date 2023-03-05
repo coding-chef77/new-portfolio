@@ -22,7 +22,7 @@ function AboutMe() {
         marginTop: 6,
       }}
     >
-      <Card style={{ display: "inline-block" }}>
+      <Card elevation={10} style={{ display: "inline-block" }}>
         <div
           style={{
             paddingTop: "16px",
