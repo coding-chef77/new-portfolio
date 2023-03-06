@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { send } from "emailjs-com";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import {
   Box,
   Button,
@@ -7,39 +10,52 @@ import {
   Container,
   Paper,
   TextField,
+  Typography,
+  Toolbar,
 } from "@mui/material";
+import Logo from "../components/navbar/logo/logo.png";
+import SendIcon from "@mui/icons-material/Send";
+
+const schema = yup.object().shape({
+  from_name: yup.string().required(),
+  subject: yup.string().required(),
+  message: yup.string().required(),
+  reply_to: yup.string().email().required(),
+});
 
 function Contact() {
-  const [toSend, setToSend] = useState({
-    from_name: "",
-    subject: "",
-    message: "",
-    reply_to: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
   });
+
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     setLoading(true);
-    send("service_s3m4ejl", "template_e6kjwdr", toSend, "59cQ7_9eF9pJMj5L7")
-      .then((response) => {
-        if (response.status === 200) {
-          setMessage("Message sent successfully!");
-        } else {
-          setMessage("Something went wrong. Please try again later.");
-        }
-      })
-      .catch((err) => {
+    try {
+      const response = await send(
+        "service_s3m4ejl",
+        "template_e6kjwdr",
+        data,
+        "59cQ7_9eF9pJMj5L7"
+      );
+      if (response.status === 200) {
+        setMessage("Message sent successfully!");
+        reset();
+      } else {
         setMessage("Something went wrong. Please try again later.");
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  };
-
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
+      }
+    } catch (err) {
+      setMessage("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -48,50 +64,59 @@ function Contact() {
       maxWidth="xs"
       sx={{ marginBottom: 6, marginTop: 6 }}
     >
-      <Paper elevation={10} sx={{ p: 4, backgroundColor: "#ccc" }}>
+      <Paper elevation={10} sx={{ p: 4, backgroundColor: "#ddeeff" }}>
         <Box
           sx={{
-            marginTop: 8,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             gap: 1,
           }}
         >
-          <form onSubmit={onSubmit}>
+          <Toolbar disableGutters>
+            <img
+              src={Logo}
+              alt="logo"
+              style={{ height: "25px", margin: "auto" }}
+            />
+          </Toolbar>
+          <Typography variant="h4">Contact Me</Typography>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <TextField
               label="Name"
-              name="from_name"
-              value={toSend.from_name}
-              onChange={handleChange}
+              {...register("from_name")}
               fullWidth
               margin="normal"
+              error={Boolean(errors.from_name)}
+              helperText={errors.from_name && "Name is required"}
             />
             <TextField
               label="Subject"
-              name="subject"
-              value={toSend.subject}
-              onChange={handleChange}
+              {...register("subject")}
               fullWidth
               margin="normal"
+              error={Boolean(errors.subject)}
+              helperText={errors.subject && "Subject is required"}
             />
             <TextField
               label="Message"
-              name="message"
-              value={toSend.message}
-              onChange={handleChange}
+              {...register("message")}
               rows={4}
               fullWidth
               multiline
               margin="normal"
+              error={Boolean(errors.message)}
+              helperText={errors.message && "Message is required"}
             />
             <TextField
               label="Your email"
-              name="reply_to"
-              value={toSend.reply_to}
-              onChange={handleChange}
+              {...register("reply_to")}
               fullWidth
               margin="normal"
+              error={Boolean(errors.reply_to)}
+              helperText={
+                errors.reply_to && "Please enter a valid email address"
+              }
             />
             <Button
               variant="contained"
@@ -99,7 +124,7 @@ function Contact() {
               sx={{ marginTop: 2 }}
               disabled={loading}
             >
-              {loading ? <CircularProgress size={24} /> : "Submit"}
+              {loading ? <CircularProgress size={24} /> : <SendIcon />}
             </Button>
             {message && (
               <Box

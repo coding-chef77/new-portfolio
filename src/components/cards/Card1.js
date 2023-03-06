@@ -28,7 +28,7 @@ export default function Card1() {
 
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
-      <Card sx={{ minWidth: "250px" }}>
+      <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
         <CardHeader title="Project one" subheader="September 14, 2021" />
         <CardMedia
           component="img"

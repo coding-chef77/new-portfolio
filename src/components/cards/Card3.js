@@ -29,7 +29,7 @@ export default function Card3() {
 
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
-      <Card sx={{ minWidth: "250px" }}>
+      <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
         <CardHeader title="CA Javascript 2" subheader="August 14, 2022" />
         <CardMedia
           component="img"
