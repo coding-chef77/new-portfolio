@@ -9,7 +9,7 @@ import {
 import React from "react";
 import heine from "./images/heine-portrait.png";
 
-function AboutMe() {
+export default function AboutMe() {
   const skillsets = ["React", "Javascript", "HTML", "CSS", "Rest API"];
   const projectManagementTools = ["Trello", "Gantt", "Kanban"];
 
@@ -22,19 +22,33 @@ function AboutMe() {
         marginTop: 6,
       }}
     >
-      <Card elevation={10} style={{ display: "inline-block" }}>
+      <Card
+        elevation={24}
+        style={{ display: "inline-block", backgroundColor: "#ddeeff" }}
+      >
         <div
           style={{
             paddingTop: "16px",
-            paddingLeft: "16px",
           }}
         >
-          <Avatar
-            src={heine}
-            sx={{ width: 60, height: 60, backgroundColor: "primary.main" }}
+          <CardHeader
+            avatar={
+              <Avatar
+                src={heine}
+                sx={{
+                  width: 80,
+                  height: 80,
+                  backgroundColor: "primary.main",
+                }}
+              />
+            }
+            title={
+              <Typography variant="h5" component="h3">
+                A bit about me - the coding chef!
+              </Typography>
+            }
           />
         </div>
-        <CardHeader title="A bit about me - the coding chef!" />
         <CardContent sx={{ maxWidth: "450px" }}>
           <Typography variant="body1">
             After a varied international career in food & logistics, I decided
@@ -68,5 +82,3 @@ function AboutMe() {
     </Container>
   );
 }
-
-export default AboutMe;

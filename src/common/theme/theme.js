@@ -6,29 +6,64 @@ export const theme = createTheme({
     // background: { main: "hsl(19, 57%, 98%)", dark: "#5E4E46" },
   },
   typography: {
-    fontFamily: "'M PLUS 1 Code', 'Open Sans', sans-serif",
-    h1: { fontWeight: 600 },
-    h2: { fontWeight: 600 },
-    h3: { fontWeight: 600 },
-    h4: { fontWeight: 600 },
-    h5: { fontWeight: 600 },
-    h6: { fontWeight: 600 },
-    subtitle1: { fontWeight: 500 },
-    subtitle2: { fontWeight: 500 },
+    fontFamily:
+      "'Fira Code', monospace, 'Sofia Sans Semi Condensed', sans-serif",
+    h1: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 600,
+      letterSpacing: "-0.02em",
+      lineHeight: 1.2,
+    },
+    h2: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 600,
+      letterSpacing: "-0.01em",
+      lineHeight: 1.2,
+    },
+    h3: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 600,
+      lineHeight: 1.2,
+    },
+    h4: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 600,
+      lineHeight: 1.2,
+    },
+    h5: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 600,
+      letterSpacing: "-0.08em",
+      lineHeight: 1.2,
+    },
+    h6: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 600,
+      lineHeight: 1.2,
+    },
+    subtitle1: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 500,
+      lineHeight: 1.2,
+    },
+    subtitle2: {
+      fontFamily: "'Fira Code', monospace",
+      fontWeight: 500,
+      lineHeight: 1.2,
+    },
     body1: {
-      fontFamily: "'Sofia Sans Semi Condensed', 'Open Sans', sans-serif",
+      fontFamily: "'Sofia Sans Semi Condensed', sans-serif",
       fontWeight: 400,
+      lineHeight: 1.5,
     },
     body2: {
-      fontFamily: "'Sofia Sans Semi Condensed', 'Open Sans', sans-serif",
+      fontFamily: "'Sofia Sans Semi Condensed', sans-serif",
       fontWeight: 400,
-    },
-    button: {
-      fontFamily: "'Sofia Sans Semi Condensed', 'Open Sans', sans-serif",
+      lineHeight: 1.5,
     },
   },
 
-  // components: {},
+  components: {},
   breakpoints: {
     values: {
       xs: 0,
