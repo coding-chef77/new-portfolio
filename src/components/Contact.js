@@ -8,9 +8,13 @@ import {
   Button,
   CircularProgress,
   Container,
-  Paper,
+  Card,
   TextField,
   Typography,
+  IconButton,
+  Stack,
+  CardHeader,
+  CardContent,
   Toolbar,
 } from "@mui/material";
 import Logo from "../components/navbar/logo/logo.png";
@@ -23,7 +27,7 @@ const schema = yup.object().shape({
   reply_to: yup.string().email().required(),
 });
 
-function Contact() {
+export default function Contact() {
   const {
     register,
     handleSubmit,
@@ -64,7 +68,7 @@ function Contact() {
       maxWidth="xs"
       sx={{ marginBottom: 6, marginTop: 6 }}
     >
-      <Paper elevation={10} sx={{ p: 4, backgroundColor: "#ddeeff" }}>
+      {/* <Paper elevation={10} sx={{ p: 4, backgroundColor: "#ddeeff" }}>
         <Box
           sx={{
             display: "flex",
@@ -141,9 +145,89 @@ function Contact() {
             )}
           </form>
         </Box>
-      </Paper>
+      </Paper> */}
+      <Card elevation={10} sx={{ backgroundColor: "#ddeeff" }}>
+        <Toolbar disableGutters>
+          <img
+            src={Logo}
+            alt="logo"
+            style={{ height: "30px", margin: "auto" }}
+          />
+        </Toolbar>
+        <CardHeader
+          title={
+            <Stack alignItems="center">
+              <Typography variant="h4">Contact Me</Typography>
+            </Stack>
+          }
+        />
+
+        <CardContent>
+          <Stack spacing={4}>
+            <Stack direction="column" spacing={2}>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <TextField
+                  label="Name"
+                  {...register("from_name")}
+                  fullWidth
+                  margin="normal"
+                  error={Boolean(errors.from_name)}
+                  helperText={errors.from_name && "Name is required"}
+                />
+                <TextField
+                  label="Subject"
+                  {...register("subject")}
+                  fullWidth
+                  margin="normal"
+                  error={Boolean(errors.subject)}
+                  helperText={errors.subject && "Subject is required"}
+                />
+                <TextField
+                  label="Message"
+                  {...register("message")}
+                  rows={4}
+                  fullWidth
+                  multiline
+                  margin="normal"
+                  error={Boolean(errors.message)}
+                  helperText={errors.message && "Message is required"}
+                />
+                <TextField
+                  label="Your email"
+                  {...register("reply_to")}
+                  fullWidth
+                  margin="normal"
+                  error={Boolean(errors.reply_to)}
+                  helperText={
+                    errors.reply_to && "Please enter a valid email address"
+                  }
+                />
+                <Button
+                  variant="contained"
+                  type="submit"
+                  sx={{ marginTop: 2 }}
+                  disabled={loading}
+                >
+                  {loading ? <CircularProgress size={24} /> : <SendIcon />}
+                </Button>
+                {message && (
+                  <Box
+                    sx={{
+                      marginTop: 2,
+                    }}
+                  >
+                    {message === "Message sent successfully!" ? (
+                      <span style={{ color: "green" }}>{message}</span>
+                    ) : (
+                      <span style={{ color: "red" }}>{message}</span>
+                    )}
+                  </Box>
+                )}
+              </form>
+            </Stack>
+          </Stack>
+        </CardContent>
+      </Card>
     </Container>
   );
 }
-
-export default Contact;

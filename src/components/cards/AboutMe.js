@@ -10,7 +10,15 @@ import React from "react";
 import heine from "./images/heine-portrait.png";
 
 export default function AboutMe() {
-  const skillsets = ["React", "Javascript", "HTML", "CSS", "Rest API"];
+  const skillsets = [
+    "React",
+    "MUI",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Wordpress",
+  ];
   const projectManagementTools = ["Trello", "Gantt", "Kanban"];
 
   return (
