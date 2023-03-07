@@ -52,11 +52,11 @@ export default function Card1() {
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary">
-            This project represents my final exam, in which my objective was to
-            design a social media platform catering specifically to parents of
-            twins. As a parent of twins myself, I was inspired to create a
-            solution that would address the unique challenges faced by this
-            group. Please click on the button below for additional information.
+            This project was my final exam where the goal was to create a social
+            media platform. Having twins myself I thought it would be a good
+            idea to create a solution that would target twin parents. Please
+            click on either the github link for full details or the button below
+            for a brief overview.
           </Typography>
           <Box
             sx={{
