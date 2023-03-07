@@ -45,7 +45,8 @@ export default function Card3() {
             ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
             pretium quis, sem. Nulla consequat massa quis enim. Donec pede
             justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-            justo, rhoncus ut,
+            justo, rhoncus ut, Please click on either the github link for full
+            details or the button below for a brief overview.
           </Typography>
           <Box
             sx={{
