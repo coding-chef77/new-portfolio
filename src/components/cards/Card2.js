@@ -46,15 +46,15 @@ export default function Card2() {
             delete, and update products. For more details, you can check out the
             Github link, or click the button below for a quick overview.
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-              marginTop: "10px",
-            }}
-          >
-            <CardActions>
+          <CardActions>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "20px",
+                marginTop: "10px",
+              }}
+            >
               <Link
                 href="https://github.com/heine5150/semester2.git"
                 underline="none"
@@ -68,8 +68,8 @@ export default function Card2() {
                   See More!
                 </Button>
               </Link>
-            </CardActions>
-          </Box>
+            </Box>
+          </CardActions>
         </CardContent>
       </Card>
       {showCard1Info && (

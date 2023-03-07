@@ -58,30 +58,34 @@ export default function Card1() {
             click on either the github link for full details or the button below
             for a brief overview.
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-              marginTop: "10px",
-            }}
-          >
-            <CardActions>
+          <CardActions>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "20px",
+                marginTop: "10px",
+              }}
+            >
               <Link
                 href="https://github.com/Noroff-FEU-Assignments/project-exam-2-heine5150.git"
                 underline="none"
                 target="_blank"
                 rel="noopener"
               >
-                <GitHubIcon sx={{ fontSize: "34px" }} />
+                <GitHubIcon
+                  sx={{
+                    fontSize: "34px",
+                  }}
+                />
               </Link>
               <Link href="./Card1Info.js">
                 <Button variant="contained" onClick={handleSeeMoreClick}>
                   See More!
                 </Button>
               </Link>
-            </CardActions>
-          </Box>
+            </Box>
+          </CardActions>
         </CardContent>
       </Card>
       {showCard1Info && (
