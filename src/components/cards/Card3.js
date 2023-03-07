@@ -39,24 +39,23 @@ export default function Card3() {
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary">
-            Hi from projects! Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-            sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-            justo, rhoncus ut, Please click on either the github link for full
-            details or the button below for a brief overview.
+            This is a React framework project that incorporates Bootstrap to
+            deliver a functional yet simple interface. The main goal of this
+            project is to establish seamless routing for easy navigation, and to
+            ensure proper form validation and login form functionality. For a
+            more in-depth understanding, you can take a look at the details via
+            the Github link provided. Alternatively, click on the button below
+            for a brief overview.
           </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: "20px",
-              marginTop: "10px",
-            }}
-          >
-            <CardActions>
+          <CardActions>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: "20px",
+                marginTop: "10px",
+              }}
+            >
               <Link
                 href="https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-heine5150.git"
                 underline="none"
@@ -70,8 +69,8 @@ export default function Card3() {
                   See More!
                 </Button>
               </Link>
-            </CardActions>
-          </Box>
+            </Box>
+          </CardActions>
         </CardContent>
       </Card>
       {showCard1Info && (
