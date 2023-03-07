@@ -52,13 +52,11 @@ export default function Card1() {
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary">
-            Hi from projects! Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-            sociis natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-            justo, rhoncus ut,
+            This project represents my final exam, in which my objective was to
+            design a social media platform catering specifically to parents of
+            twins. As a parent of twins myself, I was inspired to create a
+            solution that would address the unique challenges faced by this
+            group. Please click on the button below for additional information.
           </Typography>
           <Box
             sx={{
