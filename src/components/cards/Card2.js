@@ -13,6 +13,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card2Info from "./Card2Info";
 import React, { useState } from "react";
+import Image from "./images/semester2.png";
 
 export default function Card2() {
   const [showCard1Info, setShowCard1Info] = useState(false);
@@ -29,12 +30,12 @@ export default function Card2() {
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
       <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
-        <CardHeader title="Project two" subheader="October 14, 2022" />
+        <CardHeader title="E-commerce Project" subheader="September 28, 2022" />
         <CardMedia
           component="img"
-          height="194"
-          image="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="Paella dish"
+          height="auto"
+          image={Image}
+          alt="Screenshot of project landingpage"
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary">
@@ -56,7 +57,7 @@ export default function Card2() {
           >
             <CardActions>
               <Link
-                href="https://github.com/heine5150"
+                href="https://github.com/heine5150/semester2.git"
                 underline="none"
                 target="_blank"
                 rel="noopener"

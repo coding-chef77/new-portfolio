@@ -13,7 +13,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card3Info from "./Card3Info";
 import React, { useState } from "react";
-import javascriptImage from "./images/javascrip2.png";
+import Image from "./images/react.png";
 
 export default function Card3() {
   const [showCard1Info, setShowCard1Info] = useState(false);
@@ -30,11 +30,11 @@ export default function Card3() {
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
       <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
-        <CardHeader title="CA Javascript 2" subheader="August 14, 2022" />
+        <CardHeader title="JS/React Project" subheader="January 8, 2023" />
         <CardMedia
           component="img"
           height="auto"
-          image={javascriptImage}
+          image={Image}
           alt="screenshot website"
         />
         <CardContent>
@@ -57,7 +57,7 @@ export default function Card3() {
           >
             <CardActions>
               <Link
-                href="https://github.com/heine5150/javascript2"
+                href="https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-heine5150.git"
                 underline="none"
                 target="_blank"
                 rel="noopener"

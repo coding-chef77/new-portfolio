@@ -13,6 +13,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card1Info from "./Card1Info";
 import React, { useState } from "react";
+import image from "./images/twinChat.png";
 
 export default function Card1() {
   const [showCard1Info, setShowCard1Info] = useState(false);
@@ -29,12 +30,25 @@ export default function Card1() {
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
       <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
-        <CardHeader title="Project one" subheader="September 14, 2021" />
+        <CardHeader
+          title="SoMe Project"
+          subheader={
+            <a
+              href="https://twin-chat.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              https://twin-chat.netlify.app/
+            </a>
+          }
+        />
+
         <CardMedia
           component="img"
-          height="194"
-          image="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="Paella dish"
+          height="auto"
+          image={image}
+          alt="Twin Chat homepage screenshot"
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary">
@@ -56,7 +70,7 @@ export default function Card1() {
           >
             <CardActions>
               <Link
-                href="https://github.com/heine5150"
+                href="https://github.com/Noroff-FEU-Assignments/project-exam-2-heine5150.git"
                 underline="none"
                 target="_blank"
                 rel="noopener"
