@@ -1,22 +1,24 @@
-My Portfolio
+# My Portfolio
 
 This portfolio page is built with React and MUI and contains an About section, 3 project cards, and a Contact form.
-Getting Started
+
+## Getting Started
 
 To get a local copy up and running, follow these steps:
-Clone the repository
 
-bash
+### Clone the repository
 
+To clone the repository, run the following command in your terminal:
+
+````bash
 git clone https://github.com/heine5150/new-portfolio.git
+Make sure to replace heine5150 with your own GitHub username if you forked the repository.```
 
 Install NPM packages
 
 npm install
 
 Run the app
-
-sql
 
 npm start
 
@@ -39,3 +41,4 @@ This project was built using the following technologies:
 Author
 
 Heine Günther
+````
