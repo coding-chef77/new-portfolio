@@ -10,7 +10,7 @@ To get a local copy up and running, follow these steps:
 
 To clone the repository, run the following command in your terminal:
 
-git clone `bash https://github.com/heine5150/new-portfolio.git`
+git clone bash `https://github.com/heine5150/new-portfolio.git`
 
 Make sure to replace heine5150 with your own GitHub username if you forked the repository.
 
@@ -29,6 +29,7 @@ The About section provides a brief introduction to the owner of the portfolio.
 ## Projects
 
 The Projects section showcases 3 project cards that include images, titles, descriptions, and links to the live projects and/or source code on GitHub.
+Take a look here: [Portfolio](https://hg-portfolio.netlify.app/"Portfolio")
 
 ## Contact Form
 
