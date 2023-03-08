@@ -10,9 +10,7 @@ To get a local copy up and running, follow these steps:
 
 To clone the repository, run the following command in your terminal:
 
-```bash
-git clone https://github.com/heine5150/new-portfolio.git
-```
+git clone `bash https://github.com/heine5150/new-portfolio.git`
 
 Make sure to replace heine5150 with your own GitHub username if you forked the repository.
 
