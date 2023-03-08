@@ -2,6 +2,8 @@
 
 This portfolio page is built with React and MUI and contains an About section, 3 project cards, and a Contact form.
 
+---
+
 ## Getting Started
 
 To get a local copy up and running, follow these steps:
@@ -10,7 +12,7 @@ To get a local copy up and running, follow these steps:
 
 To clone the repository, run the following command in your terminal:
 
-git clone bash `https://github.com/heine5150/new-portfolio.git`
+git clone `https://github.com/heine5150/new-portfolio.git`
 
 Make sure to replace heine5150 with your own GitHub username if you forked the repository.
 
@@ -21,6 +23,8 @@ npm install
 ### Run the app
 
 npm start
+
+---
 
 ## About Section
 
@@ -34,6 +38,8 @@ Take a look here: [Portfolio](https://hg-portfolio.netlify.app/)
 ## Contact Form
 
 The Contact form provides a simple way for visitors to contact the owner of the portfolio. It includes fields for name, email, subject, and message.
+
+---
 
 ## Credits
 
