@@ -29,7 +29,7 @@ The About section provides a brief introduction to the owner of the portfolio.
 ## Projects
 
 The Projects section showcases 3 project cards that include images, titles, descriptions, and links to the live projects and/or source code on GitHub.
-Take a look here: [Portfolio](https://hg-portfolio.netlify.app/"Portfolio")
+Take a look here: [Portfolio](https://hg-portfolio.netlify.app/)
 
 ## Contact Form
 
