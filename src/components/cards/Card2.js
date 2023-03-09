@@ -39,7 +39,7 @@ export default function Card2() {
         />
         <CardContent>
           <Typography variant="body1" color="text.secondary">
-            This project was part of my second-semester coursework, which
+            This project was part of my third-semester coursework, which
             involved leveraging my knowledge of Javascript, CSS, Bootstrap and
             HTML to create an e-commerce site. Additionally, I implemented a
             backend to manage product data, including the ability to add,
