@@ -49,13 +49,13 @@ export default function Contact() {
         "59cQ7_9eF9pJMj5L7"
       );
       if (response.status === 200) {
-        setMessage("Message sent successfully!");
+        setMessage("Thank you for reaching out!");
         reset();
       } else {
-        setMessage("Something went wrong. Please try again later.");
+        setMessage("Something went wrong. Please try again.");
       }
     } catch (err) {
-      setMessage("Something went wrong. Please try again later.");
+      setMessage("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -149,9 +149,23 @@ export default function Contact() {
                     }}
                   >
                     {message === "Message sent successfully!" ? (
-                      <span style={{ color: "green" }}>{message}</span>
+                      <span
+                        style={{
+                          color: "#43a047",
+                          fontFamily: "'Sofia Sans Semi Condensed'",
+                        }}
+                      >
+                        {message}
+                      </span>
                     ) : (
-                      <span style={{ color: "red" }}>{message}</span>
+                      <span
+                        style={{
+                          color: "red",
+                          fontFamily: "'Sofia Sans Semi Condensed'",
+                        }}
+                      >
+                        {message}
+                      </span>
                     )}
                   </Box>
                 )}
