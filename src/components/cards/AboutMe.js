@@ -59,13 +59,13 @@ export default function AboutMe() {
         </div>
         <CardContent sx={{ maxWidth: "450px" }}>
           <Typography variant="body1">
-            After a varied international career in food & logistics, I decided
-            to change career paths and am about to graduate as a Front End
-            Developer. Although it might seem like a big jump, I see similar
-            traits including creativity, curiosity to continually learn and try
-            new methods, good team work, precision, time management and keeping
-            customers happy. Through building the different elements together, I
-            now create sites, instead of dishes!
+            Hi, I'm Heine Günther. After a varied international career in food &
+            logistics, I decided to change career paths and am about to graduate
+            as a Front End Developer. Although it might seem like a big jump, I
+            see similar traits including creativity, curiosity to continually
+            learn and try new methods, good team work, precision, time
+            management and keeping customers happy. Through building the
+            different elements together, I now create sites, instead of dishes!
           </Typography>
           <br />
           <Typography variant="body1">
