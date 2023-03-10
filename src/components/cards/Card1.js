@@ -29,7 +29,19 @@ export default function Card1() {
 
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
-      <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
+      <Card
+        sx={{
+          minWidth: "250px",
+          backgroundColor: "#363636",
+          border: "2px solid #f27735",
+        }}
+      >
+        <CardMedia
+          component="img"
+          height="auto"
+          image={image}
+          alt="Twin Chat homepage screenshot"
+        />
         <CardHeader
           title="SoMe Project"
           subheader={
@@ -37,26 +49,24 @@ export default function Card1() {
               href="https://twin-chat.netlify.app/"
               target="_blank"
               rel="noreferrer"
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                color: "#ddeeff",
+              }}
             >
               https://twin-chat.netlify.app/
             </a>
           }
         />
 
-        <CardMedia
-          component="img"
-          height="auto"
-          image={image}
-          alt="Twin Chat homepage screenshot"
-        />
         <CardContent>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1">
             This project was my final exam where the goal was to create a social
             media platform. Having twins myself I thought it would be a good
-            idea to create a solution that would target twin parents. Please
-            click on either the github link for full details or the button below
-            for a brief overview.
+            idea to create a solution that would target twin parents. This is my
+            first project using Material UI and really enjoyed the flexibility
+            of it. Please click on either the github link for full details or
+            the button below for a brief overview.
           </Typography>
           <CardActions>
             <Box

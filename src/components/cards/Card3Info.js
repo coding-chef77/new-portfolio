@@ -28,7 +28,7 @@ function Card3Info({ handleClose }) {
           installed, and REST API is used for API calls.
         </Typography>
         <br />
-        <Typography variant="h6">Technologies:</Typography>
+        <Typography variant="subtitle1">Technologies:</Typography>
         <Typography variant="body1">{technologies.join(", ")}</Typography>
       </Box>
     </Paper>

@@ -29,23 +29,32 @@ export default function Card3() {
 
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
-      <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
-        <CardHeader title="JS/React Project" subheader="January 8, 2023" />
+      <Card
+        sx={{
+          minWidth: "250px",
+          backgroundColor: "#363636",
+          border: "2px solid #f27735",
+        }}
+      >
         <CardMedia
           component="img"
           height="auto"
           image={Image}
           alt="screenshot website"
         />
+        <CardHeader
+          title="JS/React Project"
+          subheader="January, 2023"
+          subheaderTypographyProps={{ color: "#ddeeff" }}
+        />
         <CardContent>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1">
             This is a React framework project that incorporates Bootstrap to
             deliver a functional yet simple interface. The main goal of this
             project is to establish seamless routing for easy navigation, and to
-            ensure proper form validation and login form functionality. For a
-            more in-depth understanding, you can take a look at the details via
-            the Github link provided. Alternatively, click on the button below
-            for a brief overview.
+            ensure proper form validation and login form functionality. For more
+            information, take a look at the details via the Github link, or
+            click on the button below for a brief overview.
           </Typography>
           <CardActions>
             <Box

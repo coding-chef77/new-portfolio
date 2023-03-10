@@ -30,7 +30,7 @@ export default function Card1Info({ handleClose }) {
           creation, and more.
         </Typography>
         <br />
-        <Typography variant="h6">Technologies:</Typography>
+        <Typography variant="subtitle1">Technologies:</Typography>
         <Typography variant="body1">{technologies.join(", ")}</Typography>
       </Box>
     </Paper>

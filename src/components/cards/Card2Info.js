@@ -27,7 +27,7 @@ function Card2Info({ handleClose }) {
           design that adapts to different screen sizes and devices.
         </Typography>
         <br />
-        <Typography variant="h6">Technologies:</Typography>
+        <Typography variant="subtitle1">Technologies:</Typography>
         <Typography variant="body1">{technologies.join(", ")}</Typography>
       </Box>
     </Paper>

@@ -29,22 +29,33 @@ export default function Card2() {
 
   return (
     <Container sx={{ marginBottom: 2, position: "relative" }}>
-      <Card sx={{ minWidth: "250px", backgroundColor: "#ddeeff" }}>
-        <CardHeader title="E-Commerce Project" subheader="September 28, 2022" />
+      <Card
+        sx={{
+          minWidth: "250px",
+          backgroundColor: "#363636",
+          border: "2px solid #f27735",
+        }}
+      >
         <CardMedia
           component="img"
           height="auto"
           image={Image}
           alt="Screenshot of project landingpage"
         />
+        <CardHeader
+          title="E-Commerce Project"
+          subheader="September, 2022"
+          subheaderTypographyProps={{ color: "#ddeeff" }}
+        />
+
         <CardContent>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body1">
             This project was part of my third-semester coursework, which
             involved leveraging my knowledge of Javascript, CSS, Bootstrap and
             HTML to create an e-commerce site. Additionally, I implemented a
             backend to manage product data, including the ability to add,
-            delete, and update products. For more details, you can check out the
-            Github link, or click the button below for a quick overview.
+            delete, and update products. Check out the Github link, or click the
+            button below for a quick overview.
           </Typography>
           <CardActions>
             <Box

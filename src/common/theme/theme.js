@@ -13,33 +13,39 @@ export const theme = createTheme({
       fontWeight: 600,
       letterSpacing: "-0.02em",
       lineHeight: 1.2,
+      color: "whitesmoke",
     },
     h2: {
       fontFamily: "'Fira Code', monospace",
       fontWeight: 600,
       letterSpacing: "-0.01em",
       lineHeight: 1.2,
+      color: "whitesmoke",
     },
     h3: {
       fontFamily: "'Fira Code', monospace",
       fontWeight: 600,
       lineHeight: 1.2,
+      color: "whitesmoke",
     },
     h4: {
       fontFamily: "'Fira Code', monospace",
       fontWeight: 600,
       lineHeight: 1.2,
+      color: "whitesmoke",
     },
     h5: {
       fontFamily: "'Fira Code', monospace",
       fontWeight: 600,
       letterSpacing: "-0.08em",
       lineHeight: 1.2,
+      color: "whitesmoke",
     },
     h6: {
       fontFamily: "'Fira Code', monospace",
       fontWeight: 600,
       lineHeight: 1.2,
+      color: "whitesmoke",
     },
     subtitle1: {
       fontFamily: "'Fira Code', monospace",
@@ -53,8 +59,9 @@ export const theme = createTheme({
     },
     body1: {
       fontFamily: "'Sofia Sans Semi Condensed', sans-serif",
-      fontWeight: 400,
+      fontWeight: 500,
       lineHeight: 1.5,
+      color: "#f27735",
     },
     body2: {
       fontFamily: "'Sofia Sans Semi Condensed', sans-serif",
