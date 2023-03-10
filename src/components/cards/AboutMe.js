@@ -32,7 +32,11 @@ export default function AboutMe() {
     >
       <Card
         elevation={24}
-        style={{ display: "inline-block", backgroundColor: "#ddeeff" }}
+        style={{
+          display: "inline-block",
+          backgroundColor: "#363636",
+          border: "2px solid #f27735",
+        }}
       >
         <div
           style={{

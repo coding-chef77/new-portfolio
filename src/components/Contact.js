@@ -67,7 +67,10 @@ export default function Contact() {
       maxWidth="xs"
       sx={{ marginBottom: 6, marginTop: 6 }}
     >
-      <Card elevation={10} sx={{ backgroundColor: "#ddeeff" }}>
+      <Card
+        elevation={10}
+        sx={{ backgroundColor: "#363636", border: "2px solid #f27735" }}
+      >
         <Toolbar disableGutters>
           <img
             src={Logo}
@@ -90,34 +93,42 @@ export default function Contact() {
                 <TextField
                   label="Name"
                   {...register("from_name")}
+                  variant="filled"
                   fullWidth
                   margin="normal"
+                  InputProps={{ style: { backgroundColor: "#ddeeff" } }}
                   error={Boolean(errors.from_name)}
                   helperText={errors.from_name && "Name is required"}
                 />
                 <TextField
                   label="Subject"
                   {...register("subject")}
+                  variant="filled"
                   fullWidth
                   margin="normal"
+                  InputProps={{ style: { backgroundColor: "#ddeeff" } }}
                   error={Boolean(errors.subject)}
                   helperText={errors.subject && "Subject is required"}
                 />
                 <TextField
                   label="Message"
                   {...register("message")}
+                  variant="filled"
                   rows={4}
                   fullWidth
                   multiline
                   margin="normal"
+                  InputProps={{ style: { backgroundColor: "#ddeeff" } }}
                   error={Boolean(errors.message)}
                   helperText={errors.message && "Message is required"}
                 />
                 <TextField
                   label="Your email"
                   {...register("reply_to")}
+                  variant="filled"
                   fullWidth
                   margin="normal"
+                  InputProps={{ style: { backgroundColor: "#ddeeff" } }}
                   error={Boolean(errors.reply_to)}
                   helperText={
                     errors.reply_to && "Please enter a valid email address"
