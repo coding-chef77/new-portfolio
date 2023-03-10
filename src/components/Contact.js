@@ -148,7 +148,7 @@ export default function Contact() {
                       marginTop: 2,
                     }}
                   >
-                    {message === "Message sent successfully!" ? (
+                    {message === "Thank you for reaching out!" ? (
                       <span
                         style={{
                           color: "#43a047",
