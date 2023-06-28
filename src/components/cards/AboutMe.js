@@ -19,7 +19,7 @@ export default function AboutMe() {
     "Bootstrap",
     "Wordpress",
   ];
-  const projectManagementTools = ["Trello", "Gantt", "Kanban"];
+  const projectManagementTools = ["Trello", "Gantt"];
 
   return (
     <Container
@@ -56,36 +56,37 @@ export default function AboutMe() {
             }
             title={
               <Typography variant="h5" component="h3">
-                A bit about me - the coding chef!
+                Litt om meg - the coding chef!
               </Typography>
             }
           />
         </div>
         <CardContent sx={{ maxWidth: "450px" }}>
           <Typography variant="body1">
-            Hi, I'm Heine Günther. After a varied international career in food &
-            logistics, I decided to change career paths and am about to graduate
-            as a Front End Developer. Although it might seem like a big jump, I
-            see similar traits including creativity, curiosity to continually
-            learn and try new methods, good team work, precision, time
-            management and keeping customers happy. Through building the
-            different elements together, I now create sites, instead of dishes!
+            Hei, jeg heter Heine Günther. Etter en variert karriere innen mat og
+            logistikk, bestemte jeg meg for å bytte karrierevei og har nylig
+            fullført utdannelsen min som Front End Developer. Selv om det kan
+            virke som et stort hopp, ser jeg likhetstrekk som kreativitet,
+            nysgjerrighet for å kontinuerlig lære og prøve nye metoder, godt
+            samarbeid, presisjon, tidsstyring og å holde kundene fornøyde.
+            Gjennom å bygge de ulike elementene sammen, skaper jeg nå nettsider,
+            i stedet for matretter!
           </Typography>
           <br />
           <Typography variant="body1">
-            I'm looking to join a team where I can contribute my skills and
-            continue to learn more from others as we go.
+            Jeg ser etter å bli med i et team der jeg kan bidra med mine
+            ferdigheter og fortsette å lære mer fra andre
           </Typography>
           <br />
           <Typography variant="body1">
-            Check out some of my projects and reach out in the Contact Form
-            below, it would be great to hear from you!
+            Sjekk ut noen av prosjektene mine og ta kontakt i kontaktskjemaet
+            nedenfor. Jeg ser fra til å høre fra deg!.
           </Typography>
           <br />
-          <Typography variant="h6">Skillsets:</Typography>
+          <Typography variant="h6">Ferdigheter:</Typography>
           <Typography variant="body1">{skillsets.join(", ")}</Typography>
           <br />
-          <Typography variant="h6">Project Management Tools:</Typography>
+          <Typography variant="h6">Verktøy for prosjektstyring:</Typography>
           <Typography variant="body1">
             {projectManagementTools.join(", ")}
           </Typography>

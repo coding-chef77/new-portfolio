@@ -13,7 +13,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Card3Info from "./Card3Info";
 import React, { useState } from "react";
-import Image from "./images/react.png";
+import Image from "../images/react.png";
 
 export default function Card3() {
   const [showCard1Info, setShowCard1Info] = useState(false);

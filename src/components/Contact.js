@@ -49,13 +49,13 @@ export default function Contact() {
         "59cQ7_9eF9pJMj5L7"
       );
       if (response.status === 200) {
-        setMessage("Thank you for reaching out!");
+        setMessage("Takk for at du tar kontakt!");
         reset();
       } else {
-        setMessage("Something went wrong. Please try again.");
+        setMessage("Noe gikk galt. Vennligst prøv igjen.");
       }
     } catch (err) {
-      setMessage("Something went wrong. Please try again.");
+      setMessage("Noe gikk galt. Vennligst prøv igjen.");
     } finally {
       setLoading(false);
     }
@@ -81,7 +81,7 @@ export default function Contact() {
         <CardHeader
           title={
             <Stack alignItems="center">
-              <Typography variant="h4">Contact Me</Typography>
+              <Typography variant="h4">Kontakt meg</Typography>
             </Stack>
           }
         />
@@ -91,7 +91,7 @@ export default function Contact() {
             <Stack direction="column" spacing={2}>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <TextField
-                  label="Name"
+                  label="Navn"
                   {...register("from_name")}
                   variant="filled"
                   fullWidth
@@ -101,7 +101,7 @@ export default function Contact() {
                   helperText={errors.from_name && "Name is required"}
                 />
                 <TextField
-                  label="Subject"
+                  label="Emne"
                   {...register("subject")}
                   variant="filled"
                   fullWidth
@@ -111,7 +111,7 @@ export default function Contact() {
                   helperText={errors.subject && "Subject is required"}
                 />
                 <TextField
-                  label="Message"
+                  label="Melding"
                   {...register("message")}
                   variant="filled"
                   rows={4}
@@ -123,7 +123,7 @@ export default function Contact() {
                   helperText={errors.message && "Message is required"}
                 />
                 <TextField
-                  label="Your email"
+                  label="Epost-adresse"
                   {...register("reply_to")}
                   variant="filled"
                   fullWidth
@@ -148,7 +148,7 @@ export default function Contact() {
                       marginTop: 2,
                     }}
                   >
-                    {message === "Thank you for reaching out!" ? (
+                    {message === "Takk for at du tar kontakt!" ? (
                       <span
                         style={{
                           color: "#43a047",

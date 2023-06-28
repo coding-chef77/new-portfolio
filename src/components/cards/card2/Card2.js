@@ -10,12 +10,12 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import Card1Info from "./Card1Info";
-import React, { useState } from "react";
-import image from "./images/twinChat.png";
 
-export default function Card1() {
+import Card2Info from "./Card2Info";
+import React, { useState } from "react";
+import Image from "../images/heine-gpt.png";
+
+export default function Card2() {
   const [showCard1Info, setShowCard1Info] = useState(false);
 
   const handleSeeMoreClick = (e) => {
@@ -39,34 +39,24 @@ export default function Card1() {
         <CardMedia
           component="img"
           height="auto"
-          image={image}
-          alt="Twin Chat homepage screenshot"
+          image={Image}
+          alt="Screenshot of project landingpage"
         />
         <CardHeader
-          title="SoMe Project"
-          subheader={
-            <a
-              href="https://twin-chat.netlify.app/"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                textDecoration: "none",
-                color: "#ddeeff",
-              }}
-            >
-              https://twin-chat.netlify.app/
-            </a>
-          }
+          title="Tekstanalytiker"
+          subheader="April, 2023"
+          subheaderTypographyProps={{ color: "#ddeeff" }}
         />
 
         <CardContent>
           <Typography variant="body1">
-            This project was my final exam where the goal was to create a social
-            media platform. Having twins myself I thought it would be a good
-            idea to create a solution that would target twin parents. This is my
-            first project using Material UI and really enjoyed the flexibility
-            of it. Please click on either the github link for full details or
-            the button below for a brief overview.
+            Det er en modell som er trent på et datasett med filmanmeldelser og
+            brukes til å klassifisere tekst som enten positiv eller negativ.
+            Modellen bruker en variant av BERT-arkitekturen kalt DistilBERT, som
+            er designet for å være mer ressurseffektiv og mindre i størrelse enn
+            den originale BERT-modellen. Denne modellen kan være nyttig for
+            oppgaver som involverer å identifisere eller filtrere ut tekst som
+            er positiv eller negativ i tone. Modellen er fra HuggingFace.
           </Typography>
           <CardActions>
             <Box
@@ -77,21 +67,9 @@ export default function Card1() {
                 marginTop: "10px",
               }}
             >
-              <Link
-                href="https://github.com/Noroff-FEU-Assignments/project-exam-2-heine5150.git"
-                underline="none"
-                target="_blank"
-                rel="noopener"
-              >
-                <GitHubIcon
-                  sx={{
-                    fontSize: "34px",
-                  }}
-                />
-              </Link>
               <Link href="./Card1Info.js">
                 <Button variant="contained" onClick={handleSeeMoreClick}>
-                  See More!
+                  Test den!
                 </Button>
               </Link>
             </Box>
@@ -109,7 +87,7 @@ export default function Card1() {
             height: "100%",
           }}
         >
-          <Card1Info handleClose={handleCloseClick} />
+          <Card2Info handleClose={handleCloseClick} />
         </Box>
       )}
     </Container>

@@ -11,11 +11,11 @@ import {
   Typography,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Card2Info from "./Card2Info";
+import Card1Info from "./Card1Info";
 import React, { useState } from "react";
-import Image from "./images/semester2.png";
+import image from "../images/twinChat.png";
 
-export default function Card2() {
+export default function Card1() {
   const [showCard1Info, setShowCard1Info] = useState(false);
 
   const handleSeeMoreClick = (e) => {
@@ -39,23 +39,34 @@ export default function Card2() {
         <CardMedia
           component="img"
           height="auto"
-          image={Image}
-          alt="Screenshot of project landingpage"
+          image={image}
+          alt="Twin Chat homepage screenshot"
         />
         <CardHeader
-          title="E-Commerce Project"
-          subheader="September, 2022"
-          subheaderTypographyProps={{ color: "#ddeeff" }}
+          title="SoMe Project"
+          subheader={
+            <a
+              href="https://twin-chat.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                textDecoration: "none",
+                color: "#ddeeff",
+              }}
+            >
+              https://twin-chat.netlify.app/
+            </a>
+          }
         />
 
         <CardContent>
           <Typography variant="body1">
-            This project was part of my third-semester coursework, which
-            involved leveraging my knowledge of Javascript, CSS, Bootstrap and
-            HTML to create an e-commerce site. Additionally, I implemented a
-            backend to manage product data, including the ability to add,
-            delete, and update products. Check out the Github link, or click the
-            button below for a quick overview.
+            This project was my final exam where the goal was to create a social
+            media platform. Having twins myself I thought it would be a good
+            idea to create a solution that would target twin parents. This is my
+            first project using Material UI and really enjoyed the flexibility
+            of it. Please click on either the github link for full details or
+            the button below for a brief overview.
           </Typography>
           <CardActions>
             <Box
@@ -67,12 +78,16 @@ export default function Card2() {
               }}
             >
               <Link
-                href="https://github.com/heine5150/semester2.git"
+                href="https://github.com/Noroff-FEU-Assignments/project-exam-2-heine5150.git"
                 underline="none"
                 target="_blank"
                 rel="noopener"
               >
-                <GitHubIcon sx={{ fontSize: "34px" }} />
+                <GitHubIcon
+                  sx={{
+                    fontSize: "34px",
+                  }}
+                />
               </Link>
               <Link href="./Card1Info.js">
                 <Button variant="contained" onClick={handleSeeMoreClick}>
@@ -94,7 +109,7 @@ export default function Card2() {
             height: "100%",
           }}
         >
-          <Card2Info handleClose={handleCloseClick} />
+          <Card1Info handleClose={handleCloseClick} />
         </Box>
       )}
     </Container>
