@@ -46,7 +46,7 @@ export default function Card1() {
           title="SoMe Project"
           subheader={
             <a
-              href="https://twin-chat.netlify.app/"
+              href="https://exam-2-twin-chat.vercel.app/"
               target="_blank"
               rel="noreferrer"
               style={{
