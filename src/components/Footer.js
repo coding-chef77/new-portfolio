@@ -10,7 +10,7 @@ function Footer() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "10px 0",
+        padding: "14px 0 10px 0",
         textAlign: "center",
       }}
     >
