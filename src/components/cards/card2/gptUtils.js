@@ -1,6 +1,6 @@
 const API_URL =
   "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english";
-const API_TOKEN = "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";
+const API_TOKEN = "";
 
 export async function generateText(prompt) {
   const data = {
